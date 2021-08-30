@@ -1,0 +1,220 @@
+@import url(//db.onlinewebfonts.com/c/1fed4454352f201d52b65ca5480afb2d?family=Playlist);
+@font-face {font-family: "Playlist"; src: url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.eot"); src: url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.woff") format("woff"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.svg#Playlist") format("svg"); }
+@import url(//db.onlinewebfonts.com/c/405f05e6bf58471a25729ed060cda2d8?family=Glacial+Indifference);
+@font-face {font-family: "Glacial Indifference"; src: url("//db.onlinewebfonts.com/t/405f05e6bf58471a25729ed060cda2d8.eot"); src: url("//db.onlinewebfonts.com/t/405f05e6bf58471a25729ed060cda2d8.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/405f05e6bf58471a25729ed060cda2d8.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/405f05e6bf58471a25729ed060cda2d8.woff") format("woff"), url("//db.onlinewebfonts.com/t/405f05e6bf58471a25729ed060cda2d8.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/405f05e6bf58471a25729ed060cda2d8.svg#Glacial Indifference") format("svg"); }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    background-image: url(./assets/bg.png), linear-gradient(180.5deg,  rgb(46, 255, 116) 12.3%, rgba(252,251,222,0.46) 92% );
+    background-repeat:no-repeat;
+    background-size:cover; 
+}
+
+section{
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*background:linear-gradient(to bottom, #f1f4f9, #dff1ff); */
+}
+/*
+section .color{
+    position: absolute;
+    filter: blur(150px);
+
+}
+
+section .color:nth-child(1){
+    top: -350px;
+    width: 600px;
+    height:600px;
+    background: #ff359b;
+}
+
+section .color:nth-child(2){
+    top: 150px;
+    left: 100px;
+    width: 300px;
+    height:300px;
+    background: #fffd87;
+}
+
+section .color:nth-child(3){
+    top: 450px;
+    right: 100px;
+    width: 300px;
+    height:300px;
+    background: #00d2ff;
+}
+*/
+.box{
+    position:relative;
+}
+
+.box .square{
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 25px 45px rgba(0,0,0,0.1);
+    border: 4px solid rgba(255,255,255,0.5);
+    border-right: 4px solid rgba(255,255,255,0.2);
+    border-bottom: 4px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    animation: animate 10s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+@keyframes animate{
+    0%, 100%{
+        transform:translateY(-40px)
+    }
+    50%{
+        transform:translateY(40px)
+    }
+}
+
+.box .square:nth-child(1){
+    top: -50px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+}
+
+.box .square:nth-child(2){
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+}
+
+.box .square:nth-child(3){
+    bottom: 50px;
+    right: -60px;
+    width: 80px;
+    height: 80px;
+    z-index:2;
+}
+
+
+.box .square:nth-child(4){
+    bottom: -80px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+}
+
+
+.box .square:nth-child(5){
+    top: -80px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
+}
+
+.container{
+    position:relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255,255,255,0.1);
+    border-radius:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 25px 45px rgba(0,0,0,0.1);
+    border: 4px solid rgba(255,255,255,0.5);
+    border-right: 4px solid rgba(255,255,255,0.2);
+    border-bottom: 4px solid rgba(255,255,255,0.2);
+}
+
+.login_form #email_error, .login_form #pass_error, .login_form #conf_error{
+    margin-top: 5px;
+    width: 310px;
+    font-size: 18px;
+    color: #C62828;
+    background: rgba(255,0,0,0.1);
+    text-align: center;
+    padding: 5px 8px;
+    border-radius:14px ;
+    border: 1px solid #EF9A9A;
+    display: none;
+}
+
+.form{
+    position: relative;
+    width: 100%;
+    height:100%;
+    padding: 40px;
+}
+
+.form h2{
+    position: relative;
+    font-family: "playlist";
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    font-weight: 600;
+    Letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+.form h2::before{
+    content: '' ;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 130px;
+    height: 4px;
+    background: #fff;
+}
+
+.form .inputBox{
+    width: 100%;
+    margin-top:20px;
+}
+
+.form .inputBox input{
+    width: 100%;
+    background-color: rgba(255,255,255,0.2);
+    font-family: "glacial indifference";
+    border:none;
+    outline:none;
+    padding: 10px 20px ;
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 16px;
+    Letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form .inputBox input::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.form .inputBox input[type="submit"]{
+    font-family: "glacial indifference";
+    background: #fff;
+    color: #666;
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.forget{
+    font-family: "glacial indifference";
+    margin-top: 5px;
+    color: rgb(0, 0, 0);
+}
+.forget a{
+    font-family: "glacial indifference";
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}

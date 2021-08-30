@@ -1,0 +1,73 @@
+@import url(//db.onlinewebfonts.com/c/1fed4454352f201d52b65ca5480afb2d?family=Playlist);
+@font-face {font-family: "Playlist"; src: url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.eot"); src: url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.woff") format("woff"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.svg#Playlist") format("svg"); }
+body{
+    background-image: url(./assets/background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.name{
+    font-family: "Playlist";
+    color:white;
+    font-size:50px;
+    padding:10px;
+    text-shadow: 5px 2px rgb(47, 163, 52);
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-bar {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.nav-bar a{
+    padding: 25px;
+    display: inline-block;
+    justify-content: space-between;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Playlist";
+    color:white;
+    font-size:40px;
+    margin-left: 5px;
+    text-shadow: 5px 2px rgb(47, 163, 52);
+
+}
+
+.nav-bar a{
+    background:
+       linear-gradient(
+         to bottom, rgb(89, 192, 89) 0%,
+         green 100%
+       );
+    background-position: 0 80%;
+    background-repeat: repeat-x;
+    background-size: 14px 4px;
+    color:white;
+    text-decoration: none;
+    transition: background-size .2s;
+}
+  
+a:hover {
+    background-size: 14px 80px;
+}
+
+.small-content{
+    font-family: "Playlist";
+    text-align: center;
+    font-size: 30px;
+    color: lavender;
+    margin-top:500px;
+    
+}
+
+.footer{
+    padding: 0px;
+    font-size: 40px;
+}
